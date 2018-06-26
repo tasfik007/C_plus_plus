@@ -10,6 +10,7 @@ class List
     node* head=NULL;
     node* tail=NULL;
 public:
+    
     void insertFirst(int x)
     {
         node* temp;
