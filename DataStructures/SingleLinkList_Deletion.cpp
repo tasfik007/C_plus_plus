@@ -28,7 +28,6 @@ public:
             tail=temp;
         }
     }
-
     void deleteFirst()
     {
         node* temp=head;
