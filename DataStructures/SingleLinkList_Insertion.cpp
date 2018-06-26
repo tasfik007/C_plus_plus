@@ -44,6 +44,32 @@ public:
             tail=temp;
         }
     }
+
+    void insertAny(int pos)
+    {
+        int x;
+        cout<<"\nEnter the value: ";
+        cin>>x;
+
+        if(pos==0)insertFirst(x);
+        else
+        {
+        node* temp;
+        node*t1=head;
+        temp=new node;
+        temp->value=x;
+        temp->ptr=NULL;
+        int i=0;
+        while(i<pos-1)
+        {
+            t1=t1->ptr;
+            i++;
+        }
+        temp->ptr=t1->ptr;
+        t1->ptr=temp;
+        }
+
+    }
     void displayList()
     {
         node* temp=head;
@@ -84,5 +110,9 @@ int main()
 
         i++;
     }
+    l1.displayList();
+    cout<<"\nEnter your desired position: ";
+    cin>>a;
+    l1.insertAny(a);
     l1.displayList();
 }
