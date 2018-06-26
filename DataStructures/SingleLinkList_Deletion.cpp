@@ -58,7 +58,6 @@ public:
             }
                temp->ptr=temp->ptr->ptr;
                delete temp;
-
         }
     }
     void displayList()
